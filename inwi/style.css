@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('futura-pt/FuturaCyrillicMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('futura-pt/FuturaCyrillicExtraBold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+#flip-front{color:black;}
+
+::selection{
+    background-color: hotpink;
+    color: black;
+}
+
+::-moz-selection{
+    background-color: hotpink;
+    color: black;
+}
+img {
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+    display: block;
+    cursor: zoom-in;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+    transition: 1s ease;
+    transition: background 0.5s ease;
+    font-family: 'Futura', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+#one{padding: 2%;overflow-x: hidden;perspective: 1000;}
+#iceland{
+    background: url('images/iceland.jpg') repeat top center;
+    height:max-content;
+}
+
+#zoomin{transition: 0.5s ease; width:96%;}
+#atag{
+    padding: 5%;
+}
+#lang{
+    font-size: 3vw;
+    background-color: transparent;
+    border:none;
+    color:white;
+}
+option{
+    color:black;
+}
+#zoomin{background-color: rgb(255, 216, 235);}
+#opt{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 92.5%;
+}
+#img_con{background-color:rgb(255, 216, 235);}
+a{cursor:pointer;color:hotpink;text-decoration: none;border:1px inset hotpink;padding: 2.5% 5% 2.5% 5%; line-height: 12.5vw; font-size: 3.5vw;}
+a.click{background-color: hotpink;color:white;}
+h1{font-weight:900;}
+#topic{
+    background-color: hotpink;
+    background: -webkit-linear-gradient(#FFB6C1, hotpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#closebtn{background-color: pink;padding: 0 15px; font-weight: 900; color:white; font-size:4vw; cursor: pointer;}
+#image{width: 80%; margin-right: 2%;}
+#credit{color:black;margin-left:1%; font-size: 1vw;}
+#container{
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    perspective: 1000px;
+    position:relative;
+    overflow: hidden;
+    cursor:none;
+    align-items: right;
+    color: black;
+    background-color: white;
+    border-radius: 20%;
+    border-bottom-right-radius: 0%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 5%;
+    margin-top:1%;
+    margin-left: 50%;
+    letter-spacing: 1mm;
+    box-shadow: 5px 5px 5px pink;
+    text-shadow: 5px 5px 20px hotpink;
+    min-width: auto;
+    max-width: 30%;
+    width: max-content;
+}
+
+#container.hide{
+    margin-top:0.5%;
+}
+
+#info.wid{
+    width: 80%;
+}
+
+#container:not(:hover) {
+    transition: transform 0.5s ease-in-out;
+}
+
+#content {
+    background: -webkit-linear-gradient(#FFB6C1, hotpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0px;
+    transition: all 0.8s ease;
+}
+
+#content.hide {
+    opacity: 1;
+    visibility: visible;
+    font-size: 1vw;
+    margin-top: 20px;
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 101, 181, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: left 0.1s ease-out, top 0.1s ease-out, opacity 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    box-shadow: 0px 0px 5px rgb(255, 101, 181); 
+    z-index: 10;
+}
+
+#circle.expand {
+    box-shadow: 0px 0px 100px 20px rgb(255, 101, 181); 
+    background: rgba(255, 101, 181, 0.3);
+}
+
+#container:hover #circle {
+    opacity: 1;
+}
+
+/**/
+::-webkit-scrollbar {
+  width: 1.25vw;
+  height: 1.25vw;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hotpink;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hotpink;
+}
+
+
+@keyframes fontLoop {
+    0%, 20% { font-family: 'Futura', sans-serif; font-style: normal; height: 2.5vw;font-size: 2vw;}
+    25%, 45% { font-family: "Times New Roman", Times, serif; font-style: normal;}
+    50%, 70% { font-family: "Lucida Handwriting"; font-style: normal;}
+    75%, 95% { font-family: 'Arial', Helvetica, sans-serif; font-style:italic;}
+    100% { font-family: 'Futura', sans-serif; font-style: normal; height: 2.5vw;font-size: 2vw;}
+}
+
+.flip-front{
+    animation: fontLoop 2s infinite;
+    transition: font-family 0.5s ease;
+}

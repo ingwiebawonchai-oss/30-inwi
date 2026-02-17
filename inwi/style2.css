@@ -1,0 +1,64 @@
+body.dark{
+    background-color: #0F1115;
+}
+
+#p.dark{
+    background-color: #a94064;
+    background: -webkit-linear-gradient(#ffffff, #a94064);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#zoomin.dark{
+    background-color: #a94064;
+}
+
+#closebtn.dark{
+    background-color: #a94064;
+    color:#0F1115;
+}
+
+
+#img_con.dark{background-color:#a94064;}
+
+#topic.dark{
+    background-color: #a94064;
+    background: -webkit-linear-gradient(#f383aa, #a94064);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#flip.dark{color:white;}
+
+#container.dark{background-color: #0F1115;box-shadow: 5px 5px 5px #a94064;text-shadow: 5px 5px 20px #a94064;}
+
+a.dark{background-color: #a94064;color:white;cursor:pointer;text-decoration: none;border:1px inset #a94064;padding: 2.5% 5% 2.5% 5%; line-height: 12.5vw; font-size: 3.5vw;}
+a.click.dark{color:#a94064; background-color: transparent;}
+
+#circle.dark {
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 0, 0, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: left 0.1s ease-out, top 0.1s ease-out, opacity 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    box-shadow: 0px 0px 5px rgb(255, 0, 0); 
+    z-index: 10;
+}
+
+#circle.expand.dark {
+    box-shadow: 0px 0px 100px 20px rgb(255, 0, 0); 
+    background: rgb(255, 0, 0, 0.3);
+}
+
+#content.dark{
+    background: -webkit-linear-gradient(white, #a94064);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#iceland.dark{
+    background-image: url('images/iceland2.jpg');
+}
